@@ -30,7 +30,7 @@
 										In Lab
 									@elseif($app->status == "3")
 										Diagnosis
-									@elseif($app->status == "3")
+									@elseif($app->status == "4")
 										Attended
 									@endif
 								</td>

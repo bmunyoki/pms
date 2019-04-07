@@ -49,12 +49,20 @@ Route::get('/patients/appointments', [
     'roles' => ['Patient']
 ]);
 
+// View an appointment
+Route::get('/appointments/view/{id}', [
+    'uses' => 'PatientController@singleAppointment',
+    'as' => 'patient.appointments.one',
+    'middleware' => ['roles'],
+    'roles' => ['Patient']
+]);
+
 
 //Protected doctor routes
 // Get create appointment page
-Route::get('/doctor/appointments/new', [
+Route::get('/doctor/appointments', [
     'uses' => 'DoctorController@getNewAppointmentsPage',
-    'as' => 'doc.appointments.new',
+    'as' => 'doc.appointments',
     'middleware' => ['roles'],
     'roles' => ['Doctor']
 ]);

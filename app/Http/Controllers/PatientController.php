@@ -26,6 +26,16 @@ class PatientController extends Controller{
         ]);
     }
 
+    // Get a single Appointment
+    public function singleAppointment(Request $request){
+        $id = $request->segment(3);
+        $app = Visit::where('id', $id)->first();
+        return view('patient.single', [
+            'title' => "PMS::My Appointments",
+            'app' => $app
+        ]);
+    }
+
     // COmplete registration
     public function completeReg(Request $request){
     	$doc = new Patient();

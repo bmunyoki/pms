@@ -43,23 +43,12 @@
                                                 <img src="{{ asset('img/avatar.png') }}" alt="">
                                             </div>
                                             <div class="user-name">
-                                                {{ @Auth::user()->full_name }}
+                                                {{ @Auth::user()->name }}
                                             </div>
                                         </div>
                                     </div>
                         
                                     <ul class="user-menu-small-nav">
-                                        <li>
-                                            <a href="/dashboard">
-                                                <i class="icon-material-outline-dashboard"></i> Dashboard
-                                            </a>
-                                        </li>
-                                        <!-- <li>
-                                            <a href="/settings">
-                                                <i class="icon-material-outline-settings"></i>
-                                                Settings
-                                            </a>
-                                        </li> -->
                                         <li>
                                             <a href="/logout">
                                                 <i class="icon-material-outline-power-settings-new"></i> Logout
@@ -94,60 +83,30 @@
                         <div class="dashboard-nav">
                             <div class="dashboard-nav-inner">
                                 <ul data-submenu-title="">
-                                    @if(@$active == "d")
+                                    @if(Auth::user()->type == 'Patient')
                                         <li class="active">
-                                    @else
-                                        <li>
-                                    @endif
-                                        <a href="/dashboard">
-                                            <i class="icon-material-outline-dashboard"></i>
-                                            Dashboard
-                                        </a>
-                                    </li>
-                                    @if(@$active == "p")
+                                            <a href="/patients/appointments">
+                                                <i class="icon-material-outline-dashboard"></i>
+                                                Appointments
+                                            </a>
+                                        </li>
+                                    @elseif(Auth::user()->type == 'Doctor')
                                         <li class="active">
-                                    @else
-                                        <li>
+                                            <a href="/doctor/appointments">
+                                                <i class="icon-material-outline-dashboard"></i>
+                                                Appointments
+                                            </a>
+                                        </li>
+                                    @elseif(Auth::user()->type == 'Lab')
+                                        <li class="active">
+                                            <a href="/lab/waiting">
+                                                <i class="icon-material-outline-dashboard"></i>
+                                                Appointments
+                                            </a>
+                                        </li>
+                                    @elseif(Auth::user()->type == 'Admin')
+
                                     @endif
-                                        <a href="/partners/iup">
-                                            <i class="icon-material-outline-dashboard"></i>
-                                            Patient
-                                        </a>
-                                        <ul>
-                                            <li>
-                                                <a href="/partners/iup">IUP</a>
-                                            </li>
-                                            <li>
-                                                <a href="/partners/iujp">IUJP</a>
-                                            </li>
-                                            <li>
-                                                <a href="/partners/iupopk">IUPOPK</a>
-                                            </li>
-                                        </ul>   
-                                    </li>
-                                   
-                                    
-                                    <li>
-                                        <a href="/trucks">
-                                            <img height="20" width="20" src="{{ asset('img/as/trucks.png') }}" style="margin-right: 5px;" />
-                                            Trucks
-                                        </a>
-                                        <ul>
-                                            <li>
-                                                <a href="/trucks/all">All</a>
-                                            </li>
-                                            <li>
-                                                <a href="/trucks/idle">Idle</a>
-                                            </li>
-                                            <li>
-                                                <a href="/trucks/on-site">On Site</a>
-                                            </li>
-                                            <li>
-                                                <a href="/trucks/on-road">On Road</a>
-                                            </li>
-                                        </ul>   
-                                    </li>
-                                    
                                 </ul>
 
                                 <ul data-submenu-title="Account">

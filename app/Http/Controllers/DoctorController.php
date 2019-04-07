@@ -28,7 +28,7 @@ class DoctorController extends Controller{
             return array([
                 'success' => 1,
                 'message' => 'Doctor creation success! Redirecting to complete registration ...',
-                'url' => "/doctor/patients/waiting"
+                'url' => "/doctor/appointments"
             ]);
         } else {
             return array([

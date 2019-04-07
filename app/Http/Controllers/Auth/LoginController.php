@@ -29,10 +29,10 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             $type = Auth::user()->type;
-            $url = "/patients/visits/new";
+            $url = "/patients/appointments";
 
             if($type == 'Doctor'){
-                $url = "/doctor/appointments/new";
+                $url = "/doctor/appointments";
             }else if($type == 'Lab'){
                 $url = "/lab/waiting";
             }if($type == 'Admin'){
