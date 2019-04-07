@@ -1,0 +1,144 @@
+span.role{
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+#logo img{
+	margin-left: -2rem;
+}
+
+.dashboard-box .content{
+	padding: 20px;
+}
+
+.vertical-tab{
+	margin-bottom: 10px;
+}
+
+.vertical-tab .custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+}
+.vertical-tab label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.vertical-tab .custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+i.delete{
+    color: red !important;
+}
+
+#logo{
+    background-color: #2b2c2d;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /****Ipad Portrait 768 Container 750 ****/
+    #logo{
+        background-color: #fff;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /****Mobile Landscape 480 Container 100% ****/
+    #logo{
+        background-color: #fff;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    /****Mobile Portrait 320 ****/
+    #logo{
+        background-color: #fff;
+    }
+}
+
+.vertical-tab .form-selector {
+    padding-left: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+.vertical-tab .custom-radio {
+    padding: .625rem 1.8rem .625rem;
+    margin: 0;
+    border-radius: 3px;
+    color: #666;
+}
+.vertical-tab .form-selector__input:checked ~ .form-selector__label {
+    border-color: #0077B5;
+}
+.vertical-tab .custom-radio input:checked+label {
+    color: #0077B5;
+    background-color: #fff;
+}
+.vertical-tab .form-selector__label {
+    text-align: center;
+    cursor: pointer;
+    min-width: 5rem;
+    border: 1px solid #e3e6f0;
+    border-radius: 0.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+i.green{
+	color: green;
+}
+i.red{
+	color: red;
+}
+
+table{
+	width: 100%;
+}
+
+
+thead{
+	background-color: #eee;
+	border-radius: 10px 10px 0 0;
+}
+
+thead th{
+	font-weight: 500;
+    color: #666;
+    font-family: nunito, helveticaneue, helvetica neue, Helvetica, Arial, sans-serif;
+}
+
+td{
+	font-size: 14px;
+}
+
+span.company p{
+	font-size: 14px;
+	margin-bottom: 0 !important;
+	line-height: 20px;
+}
+
+
+/* Hack for alerts */
+.alert-success {
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-left: 0.5rem solid #11683f;
+}
+.alert-info {
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-left: 0.5rem solid #03acca;
+    color: #03acca;
+    background-color: #aaedf9;
+}
+.alert-warning {
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-left: 0.5rem solid #d89e20;
+    color: #d89e20;
+}
+.alert-danger {
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-left: 0.5rem solid #f80031;
+    color: #f80031;
+    background-color: #fdd1da;
+}

@@ -1,0 +1,34 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', 'Auth\LoginController@getLoginPage');
+Route::get('/register', 'Auth\RegisterController@getRegistrationPage');
+Route::get('/login', 'Auth\LoginController@getLoginPage');
+Route::post('/auth/register', 'Auth\RegisterController@register');
+Route::post('/auth/login', 'Auth\LoginController@login');
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/doctor/complete', 'DoctorController@getCompletePage');
+Route::post('/auth/doc/complete', 'DoctorController@completeReg');
+
+Route::get('/patient/complete', 'PatientController@getCompletePage');
+Route::post('/auth/patient/complete', 'PatientController@completeReg');
+
+//Protected patient routes
+// Get dashboard
+Route::get('/patients/visits/new', [
+    'uses' => 'PatientController@getCreateVisitPage',
+    'as' => 'patient.visit.new',
+    'middleware' => ['roles'],
+    'roles' => ['Patient']
+]);
