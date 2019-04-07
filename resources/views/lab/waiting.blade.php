@@ -3,7 +3,7 @@
 @section('content')
 	<div class="row">
 		<div class="col-xl-12">
-			<div class="dashboard-box main-box-in-row table-responsive">
+			<div class="dashboard-box main-box-in-row table-responsive" style="padding: 15px">
 				<table class="table table-striped">
 					<thead>
 						<tr>

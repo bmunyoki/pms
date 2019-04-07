@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"></link>
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('styles')
@@ -153,6 +154,8 @@
         ================================================== -->
         <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src = "http://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer ></script>
+
         <script src="{{ asset('js/jquery-migrate-3.0.0.min.js') }}"></script>
         <script src="{{ asset('js/mmenu.min.js') }}"></script>
         <script src="{{ asset('js/tippy.all.min.js') }}"></script>
@@ -184,10 +187,14 @@
             }); 
             
             $(document).ready(function(){
-            // Refresh page
+                // Refresh page
                 $('.reloadPage').click(function(e){
                     e.preventDefault();
                     location.reload();
+                });
+
+                $('.table').DataTable({
+                    "aoColumnDefs": [{ "bSortable": false}]
                 });
             });
 
