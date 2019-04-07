@@ -37,6 +37,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //Visits - patient 
+    public function visited(){
+        return $this->hasMany('App\Models\Visit', 'patient_id');
+    }
+
+    //Visits - attended
+    public function attended(){
+        return $this->hasMany('App\Models\Visit', 'doctor_id');
+    }
+
     // A user has one patient
     public function patient(){
         return $this->hasOne('App\Models\Patient');

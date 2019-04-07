@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Patient;
+use App\Models\Doctor;
+use App\Models\Visit;
+use App\User;
 use Auth;
 
 class PatientController extends Controller{
@@ -16,8 +19,10 @@ class PatientController extends Controller{
 
     // Get create visit page
     public function getCreateVisitPage(){
+        $doctors = User::where('type', 'Doctor')->get();
         return view('patient.new-visit', [
-            'title' => "PMS::New Visit"
+            'title' => "PMS::New Visit",
+            'doctors' => $doctors
         ]);
     }
 
@@ -33,7 +38,7 @@ class PatientController extends Controller{
             return array([
                 'success' => 1,
                 'message' => 'Patient creation success! Redirecting to complete registration ...',
-                'url' => "/patients/visits"
+                'url' => "/patients/appointments"
             ]);
         } else {
             return array([
@@ -41,5 +46,35 @@ class PatientController extends Controller{
                 'message' => 'Error creating patient. Refresh browser and try again'
             ]);
         }
+    }
+
+    // Create appointment
+    public function createAppointment(Request $request){
+        $visit = new Visit();
+        $visit->patient_id = Auth::user()->id;
+        $visit->doctor_id = $request->input('doc');
+
+        if($visit->save()){
+            return array([
+                'success' => 1,
+                'message' => 'Appointment creation success! Redirecting to your appointments ...',
+                'url' => '/patients/appointments'
+            ]);
+        }else{
+            return array([
+                'success' => 0,
+                'message' => 'Error creating appointment. Refresh browser and try again'
+            ]);
+        }
+        
+    }
+
+    // Get all appointment
+    public function getAllAppointments(){
+        $apps = Visit::where('patient_id', Auth::user()->id)->orderBy('id', 'DESC')->get();
+        return view('patient.appointments', [
+            'title' => "PMS::My Appointments",
+            'apps' => $apps
+        ]);
     }
 }

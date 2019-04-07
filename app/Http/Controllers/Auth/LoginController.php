@@ -32,9 +32,9 @@ class LoginController extends Controller
             $url = "/patients/visits/new";
 
             if($type == 'Doctor'){
-                $url = "/doctor/patients/waiting";
+                $url = "/doctor/appointments/new";
             }else if($type == 'Lab'){
-                $url = "/lab/patients/waiting";
+                $url = "/lab/waiting";
             }if($type == 'Admin'){
                 $url = "/admin/reports";
             }

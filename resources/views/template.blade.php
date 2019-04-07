@@ -18,20 +18,11 @@
                 <div class="container">
                     <div class="left-side">
                         <div id="logo">
-                            <a href="/dashboard" class="logo">
+                            <a href="/dashboard" class="logo" style="color: #fff; line-height: 45px; font-size: 24px;">
                                 PMS
                             </a>
                         </div>
-                        <nav id="navigation">
-                            <ul id="responsive">
-                                <li>
-                                    <div class="input-with-icon" style="min-width: 600px;">
-                                        <i class="icon-material-outline-search"></i>
-                                        <input id="autocomplete-input" type="text" placeholder="Search">
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
+                        
                         <div class="clearfix"></div>
                     </div>
                     <div class="right-side">
@@ -40,7 +31,7 @@
                                 <div class="header-notifications-trigger">
                                     <a href="/dashboard">
                                         <div class="user-avatar status-online">
-                                            <img src="{{ asset('img/daniel.jpeg') }}" alt="">
+                                            <img src="{{ asset('img/avatar.png') }}" alt="">
                                         </div>
                                     </a>
                                 </div>
@@ -49,7 +40,7 @@
                                     <div class="user-status">
                                         <div class="user-details">
                                             <div class="user-avatar status-online">
-                                                <img src="{{ asset('img/daniel.jpeg') }}" alt="">
+                                                <img src="{{ asset('img/avatar.png') }}" alt="">
                                             </div>
                                             <div class="user-name">
                                                 {{ @Auth::user()->full_name }}
@@ -109,8 +100,7 @@
                                         <li>
                                     @endif
                                         <a href="/dashboard">
-                                            <!--<i class="icon-material-outline-dashboard"></i>-->
-                                            <img height="20" width="20" src="{{ asset('img/as/dashboard.png') }}" style="margin-right: 5px;" />
+                                            <i class="icon-material-outline-dashboard"></i>
                                             Dashboard
                                         </a>
                                     </li>
@@ -120,8 +110,8 @@
                                         <li>
                                     @endif
                                         <a href="/partners/iup">
-                                            <img height="20" width="20" src="{{ asset('img/as/partners.png') }}" style="margin-right: 5px;" /> 
-                                            Partners
+                                            <i class="icon-material-outline-dashboard"></i>
+                                            Patient
                                         </a>
                                         <ul>
                                             <li>
@@ -183,7 +173,7 @@
 
             <!-- Content Section -->
             <div class="dashboard-content-container" data-simplebar>
-                <div class="dashboard-content-inner" id="app">
+                <div class="dashboard-content-inner" id="app" style="min-height: 500px;">
                     @yield('content')
             
                     <!-- Footer -->
