@@ -20,6 +20,7 @@
 							<th>Date</th>
 							<th>Status</th>
 							<th>View</th>
+							<th>Edit</th>
 							<th>Cancel</th>
 						</tr>
 					</thead>
@@ -31,7 +32,7 @@
 									{{ $app->attender->name }} ({{ $app->attender->doctor->speciality }})
 								</td>
 								<td>
-									{{ $app->created_at }}
+									{{ $app->dt }}
 								</td>
 								<td>
 									@if($app->status == "1")
@@ -46,6 +47,9 @@
 								</td>
 								<td>
 									<a href="/appointments/view/{{ $app->id }}"><i class="icon-feather-eye"></i></a>
+								</td>
+								<td>
+									<a href="/appointments/edit/{{ $app->id }}"><i class="icon-feather-edit-3"></i></a>
 								</td>
 								<td>
 									<a href="/appointments/delete/{{ $app->id }}"><i class="delete icon-feather-trash-2"></i></a>

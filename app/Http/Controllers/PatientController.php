@@ -36,6 +36,39 @@ class PatientController extends Controller{
         ]);
     }
 
+    // Get edit appointment page
+    public function getEditAppointment(Request $request){
+        $id = $request->segment(3);
+        $app = Visit::where('id', $id)->first();
+        $doctors = User::where('type', 'Doctor')->get();
+
+        return view('patient.edit-appointment', [
+            'title' => "PMS::Edit Appointment",
+            'app' => $app,
+            'docs' => $doctors
+        ]);
+    }
+
+    // Update appointment
+    public function updateAppointment(Request $request){
+        $id = $request->input('id');
+
+        if (Visit::where('id', $id)->update([
+            'doctor_id' => $request->input('doc'),
+            'dt' => $request->input('dt')
+        ])) {
+            return array([
+                'success' => 1,
+                'message' => 'Appointment updated. Redirecting to appointments'
+            ]);
+        } else {
+            return array([
+                'success' => 0,
+                'message' => 'Error updating appointment.'
+            ]);
+        }
+    }
+
     // Delete an appointment
     public function deleteAppointment(Request $request){
         $id = $request->segment(3);
@@ -75,6 +108,7 @@ class PatientController extends Controller{
         $visit = new Visit();
         $visit->patient_id = Auth::user()->id;
         $visit->doctor_id = $request->input('doc');
+        $visit->dt = $request->input('dt');
 
         if($visit->save()){
             return array([

@@ -21,7 +21,10 @@
                             <div class="submit-field">
                                 <h5>Select Doctor</h5>
                                 <select title="Doctor" id="doctor">
-                                	@foreach($doctors as $doc)
+                                	<option value="{{ $app->attender->id }}">
+                                			{{ $app->attender->name }}
+                                	</option>
+                                	@foreach($docs as $doc)
                                 		<option value="{{ $doc->id }}">
                                 			{{ $doc->name }} ({{ @$doc->doctor->speciality }})
                                 		</option>
@@ -33,7 +36,8 @@
                         <div class="col-xl-4">
 							<div class="submit-field">
 								<h5>Date</h5>
-								<input type="date" id="date" class="with-border">
+								<input type="hidden" name="id" id="id" value="{{ $app->id }}">
+								<input type="date" id="dt" class="with-border" value="{{ $app->dt }}">
 							</div>
                         </div>
 
@@ -56,11 +60,12 @@
 				e.preventDefault();
 				var doc = $("#doctor").val();
 				var dt = $("#date").val();
+				var id = $("#id").val();
 
-				const formData = {'doc':doc, 'dt':dt, '_token':$csrf_token};
+				const formData = {'doc':doc, 'id':id, 'dt':dt, '_token':$csrf_token};
 
 				$.ajax({
-					url: '/patients/appointments/create',
+					url: '/patients/appointments/update',
 					type: 'POST',
 					data: formData,
 					datatype: 'json'

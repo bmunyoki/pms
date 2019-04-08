@@ -20,7 +20,7 @@
                     <div class="left-side">
                         <div id="logo">
                             <a href="/dashboard" class="logo" style="color: #fff; line-height: 45px; font-size: 24px;">
-                                PMS
+                                HMS
                             </a>
                         </div>
                         

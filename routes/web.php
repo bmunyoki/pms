@@ -85,6 +85,20 @@ Route::get('/appointments/view/{id}', [
     'roles' => ['Patient']
 ]);
 
+// Edit an appointment
+Route::get('/appointments/edit/{id}', [
+    'uses' => 'PatientController@getEditAppointment',
+    'as' => 'patient.appointments.edit',
+    'middleware' => ['roles'],
+    'roles' => ['Patient']
+]);
+Route::post('/patients/appointments/update', [
+    'uses' => 'PatientController@updateAppointment',
+    'as' => 'patient.appointments.update',
+    'middleware' => ['roles'],
+    'roles' => ['Patient']
+]);
+
 // Delete an appointment
 Route::get('/appointments/delete/{id}', [
     'uses' => 'PatientController@deleteAppointment',

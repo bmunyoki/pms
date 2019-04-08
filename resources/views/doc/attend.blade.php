@@ -126,7 +126,7 @@
 						if(data[0].success == 1){
 							$("#resp").html("<p class='alert alert-success'>"+data[0].message+"</p>")
 							setTimeout(function(){
-								window.location.href = "/doctor/appointments/new";
+								window.location.href = "/doctor/appointments";
 							}, 3000);
 						}else{
 							$("#resp").html("<p class='alert alert-danger'>"+data[0].message+"</p>")
