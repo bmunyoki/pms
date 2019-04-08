@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alshefa Hospital</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('rahaf/style1.css') }}">
+	
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+   <a class="navbar-brand" href="#"><img src="{{ asset('rahaf/logo1.png') }}" alt="Hospital logo"></a>
+   <button class="navbar-toggler" type = "button" data-toggle="collapse"
+   data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto"><!--ml-auto it will make the navbar to the right if we maxmized the window -->
+     		<li class="nav-item active">
+     			<a class="nav-link" href="/">Home</a>
+     		</li>
+
+     		<li class="nav-item">
+     			<a class="nav-link" href="/services">Our services</a>
+     		</li>
+
+     		<li class="nav-item">
+     			<a class="nav-link" href="/contact">Contact us</a>
+     		</li>
+
+     		<li class="nav-item">
+     			<a class="nav-link" href="/about">About us</a>
+     		</li>
+     		<li class="nav-item">
+     			<a class="nav-link" href="/register">Register</a>
+     		</li>
+     		<li class="nav-item">
+     			<a class="nav-link" href="/login">Log in</a>
+     		</li>
+     	</ul>
+     </div>
+</div>
+</nav>
+
+
+
+<!--- Image Slider -->
+
+<div id="slides" class="carousel slide" data-ride="carousel">
+<ul class="carousel-indicators">
+  <li data-target="#slides" data-slide-to="0" class="active"></li>
+  <li data-target="#slides" data-slide-to="1"></li>
+  <li data-target="#slides" data-slide-to="2"></li>
+</ul>
+<div class="carousel-inner">
+	<div class="carousel-item active">
+		<img src="{{ asset('rahaf/h.jpg') }}">
+	</div>
+	<div class="carousel-item">
+		<img src="{{ asset('rahaf/h6.jpg') }}">
+	</div>
+	<div class="carousel-item">
+		<img src="{{ asset('rahaf/h4.jpg') }}">
+	</div>
+	<div class="carousel-item">
+		<img src="{{ asset('rahaf/h8.jpg') }}">
+	</div>
+
+</div>
+</div>
+
+
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h2 id="Aboutus" class="display-5">AlShefa Hospital</h2>
+	</div>
+
+	<div class="col-12">
+		<p class="lead">
+		Welcome to the alShefa Hospital web site.<br> We are committed to providing the highest quality patient care<br> in a friendly, compassionate setting.
+		</p>
+	</div>
+</div>
+</div>
+
+<!--- Three Column Section -->
+
+<div class="container-fluid padding">
+<div class="row text-center padding">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+  	<h3>Mission</h3>
+  	<p>To provide quality care and education as a partner in your health and wellness.</p>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-4">
+  	<h3>Values</h3>
+  	<p>As a dedicated team we value integrity, respect and excellence for all people.</p>
+  </div>
+
+  <div class="col-sm-12 col-md-4">
+  	<h3>Vision</h3>
+  	<p>To have highly satisfied patients who receive ideal healthcare from exceptional providers, employees, and facilities.</p>
+  </div>
+
+</div>
+<hr class= "my-4">
+</div>
+
+
+
+<!--- Connect -->
+<div class="container-fluid padding">
+<div class="row text-center padding">
+	<div class="col-12">
+	  <h2 id="Contact">Contact us</h2>
+	</div>
+	<div class="col-12 social padding">
+	 <a href="https://facebook.com/AlShefaHospital"><i class="fab fa-facebook"></i></a>
+	 <a href="https://twitter.com/AlShefaHospital"><i class="fab fa-twitter"></i></a>
+	 <a href="https://instagram.com/AlShefaHospital"><i class="fab fa-instagram"></i></a>
+	</div>
+
+</div>
+<hr class= "my-4">
+</div>
+
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding">
+<div class="row text-center">
+	<div class="col-md-4">
+	  <img src="{{ asset('rahaf/logo2.png') }}">
+	  <hr class="light">
+	  <p>01155555</p>
+	  <p>AlshefaHospital@gmail.com</p>
+	  <p>100 street Name</p>
+	  <p>Riyadh,saudi Arabia</p>
+    </div>
+    <div class="col-md-4">
+	  <hr class="light">
+	  <h5>Our hours</h5>
+	  <hr class="light">
+	  <p> Sunday - Thursday : 7:30 am - 5:00 pm </p>
+	  <p> Friday - Saturday : 8:00 am - 1:00 pm </p>
+    </div>
+    <div class="col-md-4">
+	  <hr class="light">
+	  <h5>Service Area</h5>
+	  <hr class="light">
+	  <p> Riyadh , saudi Arabia </p>
+	  <p> Dammam , saudi Arabia </p>
+	  <p> jeddah , saudi Arabia </p>
+    </div>
+
+
+</div>
+</div>
+</footer>
+
+
+
+</body>
+</html>

@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'Auth\LoginController@getLoginPage');
+Route::get('/', 'GuestController@getHomePage');
+Route::get('/services', 'GuestController@getServicesPage');
+Route::get('/contact', 'GuestController@getContactPage');
+Route::get('/about', 'GuestController@getAboutPage');
+
 Route::get('/register', 'Auth\RegisterController@getRegistrationPage');
 Route::get('/login', 'Auth\LoginController@getLoginPage');
 Route::post('/auth/register', 'Auth\RegisterController@register');

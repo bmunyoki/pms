@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <title>Find A Doctor</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+   
+</head>
+<body class="fix-header card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                        <b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="logo1.png" alt="Hospital logo" class="dark-logo" />
+                            
+                        </b>
+                        
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+               <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                   <a class="nav-link" href="homepage.html">Home</a>
+                  </li>
+
+                 <li class="nav-item">
+                  <a class="nav-link" href="services.html">Our services</a>
+                 </li>
+
+                 <li class="nav-item">
+                  <a class="nav-link" href="contactForm.html">Contact us</a>
+                 </li>
+
+                 <li class="nav-item">
+                  <a class="nav-link" href="AboutUs.html">About us</a>
+                 </li>
+
+                  
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+         <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                       <li>
+                            <a href="profilePage.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                        </li>
+                        <li>
+                            <a href="MakeAppointment.html" class="waves-effect"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Make Appointment</a>
+                        </li>
+                        <li>
+                            <a href="ChangeAppointment.html" class="waves-effect"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Change Appointment</a>
+                        </li>
+                        <li>
+                            <a href="CancelAppointment.html" class="waves-effect"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Cancel Appointment</a>
+                        </li>
+                         <li>
+                            <a href="RequestMedicalReport.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Request Medical Report</a>
+                        </li>
+                        <li>
+                            <a href="ViewMedicalReport.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>View Medical Report</a>
+                        </li>
+                        <li>
+                            <a href="FindADoctor.html" class="waves-effect"><i class="fa fa-globe m-r-10" aria-hidden="true"></i>Find a doctor</a>
+                        </li>
+                        <li>
+                            <a href="AppointmentHistory.html" class="waves-effect"><i class="fa fa-columns m-r-10" aria-hidden="true"></i>Appointment History</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-6 col-8 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0">Find A Doctor</h3>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <section class="section">
+      <div class="container">
+        <div class="row justify-content-center element-animate">
+          <div class="col-md-6">
+
+            <form action="#">
+              <label for="search-doctor">Search Doctors By Name OR Depatment</label>
+              <div class="input-group input-group-lg">
+                <input type="text" id="search-doctor" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Go!</button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_1.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Carl Smith</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                  <a href="https://facebook.com/Dr_CarlSmith" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_CarlSmith" class="p-2"><span class="fa fa-twitter"></span></a> 
+                  <a href="https://linkedin.com/Dr_CarlSmith" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_2.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Janice Doe</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                  <a href="https://facebook.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_JaniceDoe"class="p-2"><span class="fa fa-twitter"></span></a>
+                  <a href="https://linkedin.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_3.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Jean Doe</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                  <a href="https://facebook.com/Dr_JeanDoe" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_JeanDoe" class="p-2"><span class="fa fa-twitter"></span></a>
+                  <a href="https://linkedin.com/Dr_JeanDoe" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_4.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Jessica Doe</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                   <a href="https://facebook.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_JaniceDoe"class="p-2"><span class="fa fa-twitter"></span></a>
+                  <a href="https://linkedin.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_1.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Carl Smith</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                  <a href="https://facebook.com/Dr_CarlSmith" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_CarlSmith" class="p-2"><span class="fa fa-twitter"></span></a> 
+                  <a href="https://linkedin.com/Dr_CarlSmith" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_2.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Janice Doe</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                   <a href="https://facebook.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_JaniceDoe"class="p-2"><span class="fa fa-twitter"></span></a>
+                  <a href="https://linkedin.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_3.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Jean Doe</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                  <a href="https://facebook.com/Dr_JeanDoe" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_JeanDoe" class="p-2"><span class="fa fa-twitter"></span></a>
+                  <a href="https://linkedin.com/Dr_JeanDoe" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 element-animate">
+            <div class="media d-block media-custom text-center">
+              <img src="img/doctor_4.jpg" alt="Image Placeholder" class="img-fluid">
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Dr. Jessica Doe</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                  <a href="https://facebook.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-facebook"></span></a>
+                  <a href="https://twitter.com/Dr_JaniceDoe"class="p-2"><span class="fa fa-twitter"></span></a>
+                  <a href="https://linkedin.com/Dr_JaniceDoe" class="p-2"><span class="fa fa-linkedin"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row element-animate">
+          <div class="col-md-5">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+    </section>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- google maps api -->
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/plugins/gmaps/gmaps.min.js"></script>
+    <script src="assets/plugins/gmaps/jquery.gmaps.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>

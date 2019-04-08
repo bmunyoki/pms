@@ -20,7 +20,7 @@
                     <div class="left-side">
                         <div id="logo">
                             <a href="/dashboard" class="logo" style="color: #fff; line-height: 45px; font-size: 24px;">
-                                HMS
+                                <img height="70" src="{{ asset('rahaf/logo1.png') }}" alt="Hospital logo">
                             </a>
                         </div>
                         
