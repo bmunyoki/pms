@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Doctor;
 use App\Models\Visit;
+use App\User;
 
 use Auth;
 
@@ -14,6 +15,15 @@ class DoctorController extends Controller{
     public function getCompletePage(){
     	return view('doc.complete', [
             'title' => "PMS::Complete Registration"
+        ]);
+    }
+
+    // Get all doctors
+    public function getAll(){
+        $docs = User::where('type', 'Doctor')->get();
+        return view('doc.all', [
+            'title' => "PMS::All Doctors",
+            'docs' => $docs
         ]);
     }
 

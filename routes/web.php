@@ -57,6 +57,14 @@ Route::get('/appointments/view/{id}', [
     'roles' => ['Patient']
 ]);
 
+// Delete an appointment
+Route::get('/appointments/delete/{id}', [
+    'uses' => 'PatientController@deleteAppointment',
+    'as' => 'patient.appointments.delete',
+    'middleware' => ['roles'],
+    'roles' => ['Patient']
+]);
+
 
 //Protected doctor routes
 // Get create appointment page
@@ -65,6 +73,14 @@ Route::get('/doctor/appointments', [
     'as' => 'doc.appointments',
     'middleware' => ['roles'],
     'roles' => ['Doctor']
+]);
+
+// Get all doctors
+Route::get('/doctors/all', [
+    'uses' => 'DoctorController@getAll',
+    'as' => 'doc.all',
+    'middleware' => ['roles'],
+    'roles' => ['Doctor', 'Patient', 'Lab', 'Admin']
 ]);
 
 // Get create appointment page

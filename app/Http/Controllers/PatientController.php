@@ -36,6 +36,18 @@ class PatientController extends Controller{
         ]);
     }
 
+    // Delete an appointment
+    public function deleteAppointment(Request $request){
+        $id = $request->segment(3);
+
+        if (Visit::where('id', $id)->delete()) {
+            return redirect()->route('patient.appointments.all');
+        } else {
+            return redirect()->back('error', 'Error deleting appointment');
+        }
+        
+    }
+
     // COmplete registration
     public function completeReg(Request $request){
     	$doc = new Patient();

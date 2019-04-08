@@ -1,6 +1,15 @@
 @extends('template')
 
 @section('content')
+	<div class="dashboard-headline">
+		<h3>Your Appointments</h3>
+		<div class="row" style="padding: 20px 0 0 0;">
+			<div class="col-xl-3">
+				<a class="btn btn-primary" href="/patients/appointments/new">+ Create New</a>
+			</div>
+		</div>
+	</div>
+
 	<div class="row">
 		<div class="col-xl-12">
 			<div class="dashboard-box main-box-in-row table-responsive" style="padding: 15px">

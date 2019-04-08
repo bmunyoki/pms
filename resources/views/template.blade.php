@@ -91,6 +91,12 @@
                                                 Appointments
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="/doctors/all">
+                                                <i class="icon-material-outline-dashboard"></i>
+                                                Doctors
+                                            </a>
+                                        </li>
                                     @elseif(Auth::user()->type == 'Doctor')
                                         <li class="active">
                                             <a href="/doctor/appointments">

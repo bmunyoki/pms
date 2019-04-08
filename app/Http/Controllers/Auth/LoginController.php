@@ -57,7 +57,7 @@ class LoginController extends Controller
         }
     
         return view('auth.login', [
-            'title' => "Asgard::Login"
+            'title' => "PMS::Login"
         ]);
     }
 
