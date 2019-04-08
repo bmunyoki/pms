@@ -85,7 +85,7 @@
                             <div class="dashboard-nav-inner">
                                 <ul data-submenu-title="">
                                     @if(Auth::user()->type == 'Patient')
-                                        <li class="active">
+                                        <li>
                                             <a href="/patients/appointments">
                                                 <i class="icon-material-outline-dashboard"></i>
                                                 Appointments
@@ -98,14 +98,14 @@
                                             </a>
                                         </li>
                                     @elseif(Auth::user()->type == 'Doctor')
-                                        <li class="active">
+                                        <li>
                                             <a href="/doctor/appointments">
                                                 <i class="icon-material-outline-dashboard"></i>
                                                 Appointments
                                             </a>
                                         </li>
                                     @elseif(Auth::user()->type == 'Lab')
-                                        <li class="active">
+                                        <li>
                                             <a href="/lab/waiting">
                                                 <i class="icon-material-outline-dashboard"></i>
                                                 Appointments
