@@ -117,12 +117,18 @@
                                 </ul>
 
                                 <ul data-submenu-title="Account">
-                                    <!-- <li>
+                                    <li>
                                         <a href="/settings">
                                             <i class="icon-material-outline-settings"></i> 
                                             Settings
                                         </a>
-                                    </li> -->
+                                    </li>
+                                    <li>
+                                        <a href="/change-password">
+                                            <i class="icon-material-outline-lock"></i> 
+                                            Change Password
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="/logout">
                                             <i class="icon-material-outline-power-settings-new"></i> Logout

@@ -41,6 +41,34 @@ Route::post('/patients/appointments/create', [
     'roles' => ['Patient']
 ]);
 
+// Patient - Settings
+Route::get('/settings', [
+    'uses' => 'SettingsController@getSettingsPage',
+    'as' => 'settings',
+    'middleware' => ['roles'],
+    'roles' => ['Patient', 'Admin']
+]);
+Route::post('/settings/update', [
+    'uses' => 'SettingsController@update',
+    'as' => 'settings.update',
+    'middleware' => ['roles'],
+    'roles' => ['Patient', 'Admin']
+]);
+
+// Patient - Change password
+Route::get('/change-password', [
+    'uses' => 'SettingsController@getChangePasswordPage',
+    'as' => 'settings.changepass',
+    'middleware' => ['roles'],
+    'roles' => ['Patient', 'Admin']
+]);
+Route::post('/change-password', [
+    'uses' => 'SettingsController@changePassword',
+    'as' => 'settings.updatePass',
+    'middleware' => ['roles'],
+    'roles' => ['Patient', 'Admin']
+]);
+
 // Get all appointments
 Route::get('/patients/appointments', [
     'uses' => 'PatientController@getAllAppointments',
