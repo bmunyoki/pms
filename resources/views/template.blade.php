@@ -112,11 +112,17 @@
                                             </a>
                                         </li>
                                     @elseif(Auth::user()->type == 'Admin')
-
+                                        <li>
+                                            <a href="/admin/report">
+                                                <i class="icon-material-outline-dashboard"></i>
+                                                Dashboard
+                                            </a>
+                                        </li>
                                     @endif
                                 </ul>
 
                                 <ul data-submenu-title="Account">
+                                    @if(Auth::user()->type == 'Patient')
                                     <li>
                                         <a href="/settings">
                                             <i class="icon-material-outline-settings"></i> 
@@ -129,6 +135,7 @@
                                             Change Password
                                         </a>
                                     </li>
+                                    @endif
                                     <li>
                                         <a href="/logout">
                                             <i class="icon-material-outline-power-settings-new"></i> Logout

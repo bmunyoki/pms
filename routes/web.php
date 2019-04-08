@@ -152,3 +152,12 @@ Route::post('/lab/appointments/attend', [
     'middleware' => ['roles'],
     'roles' => ['Lab']
 ]);
+
+//Protected admin routes
+//Get dashboard/report
+Route::get('/admin/report', [
+    'uses' => 'AdminController@getDashboardPage',
+    'as' => 'admin.dashboard',
+    'middleware' => ['roles'],
+    'roles' => ['Admin']
+]);

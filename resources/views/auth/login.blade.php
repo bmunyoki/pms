@@ -17,9 +17,9 @@
 	    			<input type="password" class="form-control" id="password" placeholder="Your password" required />
 	  			</div>
 	  			<div class="form-group">
-	  				<p class="mt-2 mb-3">
+	  				<!--<p class="mt-2 mb-3">
 	    				<a class="float-right" href="/recover-account">Forgot Password? </a>
-	    			</p>
+	    			</p> -->
 	    			<button type="submit" class="btn btn-asgard btn-block" id="loginBtn">Login</button>
 	  			</div>
 			</div>
